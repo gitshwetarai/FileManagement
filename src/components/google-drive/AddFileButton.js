@@ -74,64 +74,6 @@ export default function AddFileButton({ currentFolder }) {
       })
     })
 
-    // const uploadTask = storage
-    //   .ref(`/files/${currentUser.uid}/${filePath}`)
-    //   .put(file)
-
-    // uploadTask.on(
-    //   "state_changed",
-    //   snapshot => {
-    //     const progress = snapshot.bytesTransferred / snapshot.totalBytes
-    //     setUploadingFiles(prevUploadingFiles => {
-    //       return prevUploadingFiles.map(uploadFile => {
-    //         if (uploadFile.id === id) {
-    //           return { ...uploadFile, progress: progress }
-    //         }
-
-    //         return uploadFile
-    //       })
-    //     })
-    //   },
-    //   () => {
-    //     setUploadingFiles(prevUploadingFiles => {
-    //       return prevUploadingFiles.map(uploadFile => {
-    //         if (uploadFile.id === id) {
-    //           return { ...uploadFile, error: true }
-    //         }
-    //         return uploadFile
-    //       })
-    //     })
-    //   },
-    //   () => {
-    //     setUploadingFiles(prevUploadingFiles => {
-    //       return prevUploadingFiles.filter(uploadFile => {
-    //         return uploadFile.id !== id
-    //       })
-    //     })
-
-    //     uploadTask.snapshot.ref.getDownloadURL().then(url => {
-    //       database.files
-    //         .where("name", "==", file.name)
-    //         .where("userId", "==", currentUser.uid)
-    //         .where("folderId", "==", currentFolder.id)
-    //         .get()
-    //         .then(existingFiles => {
-    //           const existingFile = existingFiles.docs[0]
-    //           if (existingFile) {
-    //             existingFile.ref.update({ url: url })
-    //           } else {
-    //             database.files.add({
-    //               url: url,
-    //               name: file.name,
-    //               createdAt: new Date().getTime(),
-    //               folderId: currentFolder.id,
-    //               userId: currentUser.uid,
-    //             })
-    //           }
-    //         })
-    //     })
-    //   }
-    // )
   }
 
   return (
