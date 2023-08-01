@@ -9,7 +9,7 @@ export default function NavbarComponent() {
   return (
     <Navbar bg="light" expand="sm">
       <Navbar.Brand as={Link} to="/">
-        Shweta's File Manager
+        Assets upload and search Application
       </Navbar.Brand>
       <Nav>
         <Nav.Link as={Link} to="/user">
